@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         var vel = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * _speed;
         vel.y = _rb.velocity.y;
         _rb.velocity = vel;
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time > canJump) { _rb.AddForce(Vector3.up * _jumpforce); canJump = Time.time + 1.0f;}
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > canJump) { _rb.AddForce(Vector3.up * _jumpforce); canJump = Time.time + 1.0f; }
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
         {
             isRunning = true;
